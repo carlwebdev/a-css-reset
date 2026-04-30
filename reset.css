@@ -6,19 +6,12 @@
  *
  */
 
-/* 
- * BOX MODEL
- */
  *, *::before, *::after {
 	box-sizing: border-box;
 }
 
- /* 
-  * REMOVE MARGIN AROUND THE PAGE 
-  * BODY MARGIN 0 IS THE KEY - this is the actual solver for the body margin issue 
-  */ 
  html, body {
-	height: 100%; /* Useful for full-height layouts */
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -35,7 +28,6 @@
 	 height:auto; /* The height is added to ensure the aspect ratio of the image is retained. */ /* Maintain aspect ratio */
  }
 	
- 
 img,
 picture,
 video,
