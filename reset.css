@@ -1,59 +1,13 @@
 /* 
  *
- *
  * a css reset
- *
- *
- */
-
- *, *::before, *::after {
-	box-sizing: border-box;
-}
-
- html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-
-/* 
- *
- * MEDIA HANDLING (RESET) 
+ * @carlwebdev
  *
  */
- 
- img {
-	 max-width:100%; 
-	 height:auto; /* The height is added to ensure the aspect ratio of the image is retained. */ /* Maintain aspect ratio */
- }
-	
-img,
-picture,
-video,
-/* audio, */
-iframe,
-canvas {
-  display: block; /* to avoid default margin bottom due to display: inline(-block) */ /* To avoid default margin bottom due to inline-block */
-  max-width: 100%;
-  width: 100%; 	
-}
-
-audio,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-iframe,
-video {
-  aspect-ratio: 16 / 9;
-}
 
 
 
-  
-/* 
+ /* 
  * CSS RESET - basics
  */
 html, body,
@@ -70,14 +24,105 @@ ol, ul, li {
 	font-size: inherit; /* VS font-size: 100%; */ /* Use 'inherit' to scale with parent font sizes */
 }
 
+ /*
+ * CSS RESET
+ */
+/*
+html, body,
+div, span,
+h1, h2, h3, h4, h5, h6, 
+p, 
+pre, code, */ /* smp, smp , sample ... */
+/* img,
+dl, dt, dd, 
+ol, ul, li,
+img {
+	margin: 0;
+	padding: 0; */
+	/* border: 0; */
+	/* outline: 0; */
+	/* font-size:100%; */ /* for headings, works */
+/* } */
+
+
+
+
+
+
+
+
+ *, *::before, *::after {
+	box-sizing: border-box;
+}
+
+ 	  
+/* 
+ * BOX MODEL
+ * Universal Box Sizing - https://css-tricks.com/box-sizing/ 
+ */
+ /*
+ *, *:before, *:after {
+    box-sizing: border-box;
+  }
+*/
+
+
+ html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 
 /* 
- *
- * TYPOGRAPHY BASICS (RESET) 
- *
+ * MEDIA HANDLING (RESET) 
  */
 
- p {}
+ img {
+	 max-width:100%; 
+	 height:auto; /* The height is added to ensure the aspect ratio of the image is retained. */ /* Maintain aspect ratio */
+ }
+	
+img,
+picture,
+video,
+/* audio, */
+iframe,
+canvas {
+  display: block;
+  max-width: 100%;
+  width: 100%; /* */
+  /*
+  max-width: 100%;
+  height: auto;
+  */
+
+}
+
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* this doenst beln in the reste, butin thtags... */
+iframe,
+video {
+  aspect-ratio: 16 / 9;
+}
+
+  
+
+
+
+
+
+
+/* 
+ * TYPOGRAPHY BASICS (RESET) 
+ */
+
 
 
 /* Headings */	
@@ -86,12 +131,21 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal; /* Reset to avoid bold headings */
 }
 
+
+
+
 h1, h2, h3, h4, h5, h6 {
 	text-wrap: balance; 
 }
+
 p {
 	text-wrap: pretty; 
 }
+
+
+
+
+p {}
 
 
 
@@ -109,8 +163,6 @@ ul, ol {
 	list-style: none;
 	padding: 0; /* test this */
 }
-
-
 
 
 /*
@@ -132,10 +184,7 @@ hr {
 	margin: 1em 0;
 }
   
-  
-
 details {}
-
 
 summary {
 	padding:1em;
@@ -144,8 +193,6 @@ summary + * {
 	padding:1em;
 	padding-inline:2em;
 }
-
-
 
 /* FOT INHERITANCE, THIS SI PROBABLY NEAT - ALSO ADD INOUTS / PLACEHODERS ...  */
  input,
@@ -164,9 +211,6 @@ input[type="radio"] {
   padding: 0;
   box-sizing: border-box; /* Shouldn't this be covered by the wildcard selector ? */
 }
-
-
-
 
 /* 
  *
